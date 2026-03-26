@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+/* Styles globaux personnalisés */
+@layer base {
+  :root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body {
+    background-color: #FAF0E6; /* Beige comme la Hero */
+  }
+}
+
+/* Classes utilitaires personnalisées */
+@layer utilities {
+  /* Ajouter des classes utilitaires personnalisées ici */
+}
