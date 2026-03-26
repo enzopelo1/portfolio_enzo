@@ -82,7 +82,7 @@ export const Hero = () => {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <img
-            src="/photo_enzo.webp"
+            src="/photo_enzo_droit.webp"
             alt="Enzo Leprince"
             className="w-full h-full object-cover object-top"
           />
