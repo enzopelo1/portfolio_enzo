@@ -25,7 +25,7 @@ const projects = [
     id: 3,
     title: 'Aureon',
     description:
-      'Bibliothèque de composants React & GSAP à thème sombre et samouraï — avec caractères japonais et esthétique cinématique. La particularité : on ne copie pas du code, on copie un prompt pour régénérer le composant soi-même. Chaque bloc est une intention, pas juste un snippet.',
+      'Bibliothèque de composants React & GSAP à thème sombre et samouraï : avec caractères japonais et esthétique cinématique. La particularité : on ne copie pas du code, on copie un prompt pour régénérer le composant soi-même. Chaque bloc est une intention, pas juste un snippet.',
     image: '/projet/aureon.svg',
     tags: ['React', 'GSAP', 'TypeScript', 'Tailwind CSS'],
     color: '#2D2D3A', // Anthracite profond

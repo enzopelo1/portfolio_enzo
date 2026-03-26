@@ -29,7 +29,7 @@ export const projectsData: ProjectData[] = [
     color: '#5D737E',
     year: '2024',
     role: 'Développeur Fullstack & Product',
-    context: 'Projet entreprise — Traivis',
+    context: 'Projet entreprise : Traivis',
     highlights: [
       'Utilisé par +300 personnes en entreprise',
       'Génération de CR en moins de 2 minutes',
@@ -49,7 +49,7 @@ export const projectsData: ProjectData[] = [
     description:
       'Plateforme d\'essayage virtuel de vêtements. Depuis n\'importe quel site marchand, un clic sur le logo Vesty suffit pour importer l\'article.',
     longDescription:
-      'Vesty résout un problème universel du e-commerce : acheter des vêtements en ligne sans pouvoir les essayer. L\'idée est simple — sur n\'importe quelle page produit (H&M, Zara, etc.), on clique sur le logo Vesty, l\'article est importé, et on l\'essaie directement sur soi depuis la plateforme.',
+      'Vesty résout un problème universel du e-commerce : acheter des vêtements en ligne sans pouvoir les essayer. L\'idée est simple : sur n\'importe quelle page produit (H&M, Zara, etc.), on clique sur le logo Vesty, l\'article est importé, et on l\'essaie directement sur soi depuis la plateforme.',
     image: '/projet/vesty.svg',
     tags: ['PHP', 'JavaScript', 'CSS'],
     color: '#7C9E87',
@@ -73,15 +73,15 @@ export const projectsData: ProjectData[] = [
     slug: 'aureon',
     title: 'Aureon',
     description:
-      'Bibliothèque de composants React & GSAP à thème sombre et samouraï. On ne copie pas du code — on copie un prompt pour régénérer le composant.',
+      'Bibliothèque de composants React & GSAP à thème sombre et samouraï. On ne copie pas du code : on copie un prompt pour régénérer le composant.',
     longDescription:
-      'Aureon est une bibliothèque de composants React + GSAP pensée différemment. L\'esthétique ? Sombre, cinématique, avec des caractères japonais et une identité visuelle forte inspirée de l\'univers samouraï. La particularité qui change tout : plutôt que de copier du code, on copie un prompt — un prompt soigneusement rédigé pour régénérer le composant via IA. Chaque bloc est une intention.',
+      'Aureon est une bibliothèque de composants React + GSAP pensée différemment. L\'esthétique ? Sombre, cinématique, avec des caractères japonais et une identité visuelle forte inspirée de l\'univers samouraï. La particularité qui change tout : plutôt que de copier du code, on copie un prompt : un prompt soigneusement rédigé pour régénérer le composant via IA. Chaque bloc est une intention.',
     image: '/projet/aureon.svg',
     tags: ['React', 'GSAP', 'TypeScript', 'Tailwind CSS'],
     color: '#8B7355',
     year: '2025',
     role: 'Créateur & Designer',
-    context: 'Projet personnel — Open source',
+    context: 'Projet personnel : Open source',
     highlights: [
       'Composants React + GSAP prêts à l\'emploi',
       'Copie de prompt, pas de code',
@@ -92,7 +92,7 @@ export const projectsData: ProjectData[] = [
     challenge:
       'Repenser le concept même de bibliothèque de composants à l\'ère de l\'IA. Comment rendre les composants portables sans les rendre rigides ? La réponse : le prompt comme unité de partage.',
     result:
-      'Une bibliothèque avec une identité visuelle mémorable et un paradigme de distribution inédit — copier l\'intention plutôt que l\'implémentation.',
+      'Une bibliothèque avec une identité visuelle mémorable et un paradigme de distribution inédit : copier l\'intention plutôt que l\'implémentation.',
   },
   {
     id: 4,
@@ -107,7 +107,7 @@ export const projectsData: ProjectData[] = [
     color: '#6D597A',
     year: '2024',
     role: 'Développeur Fullstack',
-    context: 'Projet client — Traivis',
+    context: 'Projet client : Traivis',
     highlights: [
       'Intégration APIs Instagram, Facebook et LinkedIn via RapidAPI',
       'Analyse IA des performances avec bilan personnalisé',
@@ -117,7 +117,7 @@ export const projectsData: ProjectData[] = [
       'RSA Bulk : gestion de plusieurs groupes d\'annonces simultanément',
     ],
     challenge:
-      'Combiner des APIs aux structures très différentes (Instagram, Facebook, LinkedIn) dans une interface cohérente, tout en produisant une analyse IA fiable basée uniquement sur les vraies données extraites — sans hallucination ni données inventées.',
+      'Combiner des APIs aux structures très différentes (Instagram, Facebook, LinkedIn) dans une interface cohérente, tout en produisant une analyse IA fiable basée uniquement sur les vraies données extraites : sans hallucination ni données inventées.',
     result:
       'Un outil tout-en-un qui remplace des heures d\'analyse manuelle. Le module RSA a aussi permis d\'accélérer drastiquement la création de campagnes Google Ads pour l\'agence.',
   },
@@ -128,13 +128,13 @@ export const projectsData: ProjectData[] = [
     description:
       'Analyse de kits mails par IA pour déterminer leur qualité et générer du code optimisé. Automatisation complète.',
     longDescription:
-      'MailScan analyse des kits emails complets pour déterminer s\'ils sont bien construits : structure HTML, images, texte, ratio, délivrabilité. L\'IA produit une analyse détaillée puis génère du code amélioré directement exploitable. Tout est automatisé — upload, analyse, sortie code.',
+      'MailScan analyse des kits emails complets pour déterminer s\'ils sont bien construits : structure HTML, images, texte, ratio, délivrabilité. L\'IA produit une analyse détaillée puis génère du code amélioré directement exploitable. Tout est automatisé : upload, analyse, sortie code.',
     image: '/projet/mailscan.png',
     tags: ['PHP', 'n8n', 'Gemini AI'],
     color: '#5F9EA0',
     year: '2024',
     role: 'Développeur & Automatisation',
-    context: 'Projet interne — Traivis',
+    context: 'Projet interne : Traivis',
     highlights: [
       'Analyse structurelle complète du kit email',
       'Score de qualité et délivrabilité',
@@ -160,7 +160,7 @@ export const projectsData: ProjectData[] = [
     color: '#A98467',
     year: '2024',
     role: 'Développeur Fullstack',
-    context: 'Projet interne — Traivis',
+    context: 'Projet interne : Traivis',
     highlights: [
       'Suivi des heures par projet et client',
       'Gestion des tâches intégrée',
@@ -186,7 +186,7 @@ export const projectsData: ProjectData[] = [
     color: '#2E6B8A',
     year: '2025',
     role: 'Développeur Fullstack & Automatisation',
-    context: 'Projet client — Traivis',
+    context: 'Projet client : Traivis',
     highlights: [
       'Gestion de PDF jusqu\'à 300 pages par découpage en lots de 5',
       'Pipeline email → analyse → rapport 100% automatisé',
@@ -206,7 +206,7 @@ export const projectsData: ProjectData[] = [
     description:
       'Site vitrine freelance pour une étudiante ISCOM Lille. Design élégant avec palette marron, vert pastel et rose pastel.',
     longDescription:
-      'Maison W est un site vitrine freelance conçu pour Wanda Dejonghe, étudiante en marketing et communication à l\'ISCOM Lille. L\'objectif : lui créer une présence en ligne qui reflète son identité — élégante, moderne et créative. J\'ai géré le design complet, le développement et les animations.',
+      'Maison W est un site vitrine freelance conçu pour Wanda Dejonghe, étudiante en marketing et communication à l\'ISCOM Lille. L\'objectif : lui créer une présence en ligne qui reflète son identité : élégante, moderne et créative. J\'ai géré le design complet, le développement et les animations.',
     image: '/projet/wanda.png',
     tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'CSS Animations'],
     color: '#B5838D',
@@ -290,7 +290,7 @@ export const projectsData: ProjectData[] = [
     color: '#F4A261',
     year: '2024',
     role: 'Automatisation & Intégrations',
-    context: 'Projets clients — Traivis',
+    context: 'Projets clients : Traivis',
     highlights: [
       'n8n self-hosted sur VPS',
       'Triggers : Email, Webhooks, Schedule',

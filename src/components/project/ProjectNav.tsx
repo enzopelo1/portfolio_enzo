@@ -115,7 +115,7 @@ const NavCard = ({ project, direction, onNavigate }: NavCardProps) => {
         </motion.h3>
 
         <p className={`text-sm text-white/30 max-w-xs ${isPrev ? '' : 'text-right'} leading-relaxed`}>
-          {project.role} — {project.year}
+          {project.role} : {project.year}
         </p>
       </div>
 

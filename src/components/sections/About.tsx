@@ -87,7 +87,7 @@ export const About = () => (
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.1, ease } }}
             viewport={{ once: true }}
           >
-            Hey, moi c&apos;est Enzo — développeur fullstack, un peu obsédé par l&apos;automatisation.
+            Hey, moi c&apos;est Enzo : développeur fullstack, un peu obsédé par l&apos;automatisation.
           </motion.p>
 
           <motion.p
@@ -117,7 +117,7 @@ export const About = () => (
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.36, ease } }}
             viewport={{ once: true }}
           >
-            Chez Traivis, j&apos;ai développé MeetCraft — une app de compte-rendus automatisés par IA,
+            Chez Traivis, j&apos;ai développé MeetCraft : une app de compte-rendus automatisés par IA,
             utilisée aujourd&apos;hui par plus de 300 personnes. C&apos;est le genre de projet qui m&apos;éclate :
             utile, technique, et avec un vrai impact.
           </motion.p>
