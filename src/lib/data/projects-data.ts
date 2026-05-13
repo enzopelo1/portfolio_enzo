@@ -13,6 +13,7 @@ export interface ProjectData {
   highlights: string[];
   challenge: string;
   result: string;
+  url?: string;
 }
 
 export const projectsData: ProjectData[] = [
@@ -27,9 +28,10 @@ export const projectsData: ProjectData[] = [
     image: '/projet/Meetcraft.png',
     tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'PHP', 'Claude API', 'Firebase', 'n8n', 'OVH'],
     color: '#5D737E',
-    year: '2024',
+    year: '2025 - 2026',
     role: 'Développeur Fullstack & Product',
     context: 'Projet entreprise : Traivis',
+    url: 'https://meetcraft.io',
     highlights: [
       'Utilisé par +300 personnes en entreprise',
       'Génération de CR en moins de 2 minutes',
@@ -53,9 +55,10 @@ export const projectsData: ProjectData[] = [
     image: '/projet/vesty.svg',
     tags: ['PHP', 'JavaScript', 'CSS'],
     color: '#7C9E87',
-    year: '2025',
+    year: '2026',
     role: 'Développeur & Designer',
     context: 'Projet personnel',
+    url: 'https://vesty-app.com',
     highlights: [
       'Extension / intégration sur sites marchands tiers',
       'Essayage virtuel sur photo personnelle',
@@ -79,9 +82,10 @@ export const projectsData: ProjectData[] = [
     image: '/projet/aureon.svg',
     tags: ['React', 'GSAP', 'TypeScript', 'Tailwind CSS'],
     color: '#8B7355',
-    year: '2025',
+    year: '2026',
     role: 'Créateur & Designer',
     context: 'Projet personnel : Open source',
+    url: 'https://aureon-murex.vercel.app/',
     highlights: [
       'Composants React + GSAP prêts à l\'emploi',
       'Copie de prompt, pas de code',
@@ -96,6 +100,61 @@ export const projectsData: ProjectData[] = [
   },
   {
     id: 4,
+    slug: 'traivis',
+    title: 'Traivis',
+    description:
+      'Refonte complète du site traivis.io : design, SEO, restructuration des textes. Chatbot IA intégré connecté aux infos entreprise et à l\'agenda pour prendre des RDV.',
+    longDescription:
+      'J\'ai pris en charge la refonte totale de traivis.io, de A à Z. Côté design, tout a été repensé pour refléter l\'identité de l\'agence et mieux convaincre les visiteurs. Côté contenu, j\'ai restructuré l\'ensemble des textes pour clarifier la proposition de valeur de Traivis et l\'optimiser pour le référencement naturel.\n\nJ\'ai également développé et intégré un chatbot IA directement sur le site : il connaît les informations de l\'entreprise, peut répondre aux questions des visiteurs et se connecte à l\'agenda pour proposer et réserver des rendez-vous en temps réel.\n\nEnfin, j\'ai créé une interface admin complète permettant à l\'équipe de gérer les articles du blog et de suivre les coûts en tokens des agents IA déployés.',
+    image: '/projet/traivis.png',
+    tags: ['React', 'TypeScript', 'Claude API', 'SEO', 'Chatbot IA', 'Admin', 'Blog'],
+    color: '#3D6B8A',
+    year: '2026',
+    role: 'Développeur Fullstack & Designer',
+    context: 'Projet interne : Traivis',
+    url: 'https://traivis.io',
+    highlights: [
+      'Refonte design complète du site traivis.io',
+      'Restructuration des textes et de la proposition de valeur',
+      'Optimisation SEO on-page',
+      'Chatbot IA connecté aux infos entreprise et à l\'agenda',
+      'Prise de RDV automatisée via le chatbot',
+      'Interface admin : gestion du blog et suivi des coûts tokens',
+    ],
+    challenge:
+      'Repenser entièrement un site existant tout en préservant la continuité de l\'activité, et intégrer un chatbot capable à la fois de vendre la valeur de l\'agence et de concrétiser une prise de contact directe via l\'agenda.',
+    result:
+      'Un site qui reflète mieux le positionnement de Traivis, optimisé pour le SEO, avec un chatbot qui transforme les visiteurs en prospects qualifiés et automatise la prise de RDV.',
+  },
+  {
+    id: 5,
+    slug: 'agents-ia',
+    title: 'Agents IA',
+    description:
+      'Suite de 3 agents IA : veille automatique → article SEO, publication LinkedIn avec validation humaine, et chatbot connecté aux données Traivis et à l\'agenda.',
+    longDescription:
+      'J\'ai conçu et développé une suite de 3 agents IA complémentaires, pensés pour fonctionner ensemble :\n\n<strong>Agent 1 — Veille & Blog</strong> : récupère automatiquement une actualité de moins de 48h dans le domaine de l\'IA, la transforme en article de blog optimisé SEO (structure, mots-clés, meta) et le publie dans le CMS de Traivis.\n\n<strong>Agent 2 — LinkedIn</strong> : reprend l\'article généré, le condense en un post LinkedIn percutant, et soumet le contenu à validation humaine avant publication. L\'agent ne poste qu\'après approbation explicite (human-in-the-loop), garantissant la maîtrise éditoriale.\n\n<strong>Agent 3 — Chatbot</strong> : agent conversationnel connecté à la base de connaissances de Traivis et à l\'agenda en temps réel. Il répond aux questions des visiteurs, présente l\'entreprise, et peut réserver des créneaux directement depuis la conversation.',
+    image: '/projet/agents-ia.png',
+    tags: ['Claude API', 'LinkedIn API', 'Agenda API', 'Human-in-the-loop', 'SEO', 'n8n'],
+    color: '#5A3E6B',
+    year: '2026',
+    role: 'Développeur IA & Automatisation',
+    context: 'Projet interne : Traivis',
+    highlights: [
+      'Agent veille : actualité < 48h → article blog SEO automatique',
+      'Agent LinkedIn : post condensé avec validation humaine avant publication',
+      'Agent chatbot : connecté aux données Traivis et à l\'agenda en temps réel',
+      'Human-in-the-loop sur la publication LinkedIn',
+      'Pipeline complet veille → contenu → diffusion',
+      'Prise de RDV automatisée via le chatbot',
+    ],
+    challenge:
+      'Orchestrer 3 agents distincts avec des responsabilités différentes tout en maintenant une cohérence éditoriale. Le défi principal : garder un contrôle humain sur la diffusion (LinkedIn) sans casser la fluidité du pipeline automatisé.',
+    result:
+      'Un pipeline de contenu quasi-autonome : chaque semaine, des articles SEO sont publiés et des posts LinkedIn soumis à validation, pendant que le chatbot engage les visiteurs et génère des RDV sans intervention manuelle.',
+  },
+  {
+    id: 6,
     slug: 'mojo',
     title: 'Mo&Jo',
     description:
@@ -122,7 +181,7 @@ export const projectsData: ProjectData[] = [
       'Un outil tout-en-un qui remplace des heures d\'analyse manuelle. Le module RSA a aussi permis d\'accélérer drastiquement la création de campagnes Google Ads pour l\'agence.',
   },
   {
-    id: 5,
+    id: 7,
     slug: 'mailscan',
     title: 'MailScan',
     description:
@@ -132,9 +191,10 @@ export const projectsData: ProjectData[] = [
     image: '/projet/mailscan.png',
     tags: ['PHP', 'n8n', 'Gemini AI'],
     color: '#5F9EA0',
-    year: '2024',
+    year: '2026',
     role: 'Développeur & Automatisation',
     context: 'Projet interne : Traivis',
+    url: 'https://mailscan.traivis.io/',
     highlights: [
       'Analyse structurelle complète du kit email',
       'Score de qualité et délivrabilité',
@@ -148,7 +208,7 @@ export const projectsData: ProjectData[] = [
       'Un outil interne qui accélère drastiquement le contrôle qualité des emails clients. Ce qui prenait 2h d\'audit manuel se fait en 5 minutes.',
   },
   {
-    id: 6,
+    id: 8,
     slug: 'erp-traivis',
     title: 'ERP Traivis',
     description:
@@ -158,7 +218,7 @@ export const projectsData: ProjectData[] = [
     image: '/projet/erp.png',
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     color: '#A98467',
-    year: '2024',
+    year: '2025',
     role: 'Développeur Fullstack',
     context: 'Projet interne : Traivis',
     highlights: [
@@ -174,7 +234,7 @@ export const projectsData: ProjectData[] = [
       'Un ERP adopté immédiatement par toute l\'équipe. Le pilotage de la facturation est devenu transparent et le suivi des projets, enfin fiable.',
   },
   {
-    id: 7,
+    id: 9,
     slug: 'mccover',
     title: 'McCover',
     description:
@@ -200,7 +260,7 @@ export const projectsData: ProjectData[] = [
       'Un outil utilisé en conditions réelles par l\'équipe McCover. Le traitement automatique des factures a supprimé des heures de vérification manuelle hebdomadaire.',
   },
   {
-    id: 8,
+    id: 10,
     slug: 'maison-w',
     title: 'Maison W',
     description:
@@ -210,9 +270,10 @@ export const projectsData: ProjectData[] = [
     image: '/projet/wanda.png',
     tags: ['HTML', 'Tailwind CSS', 'JavaScript', 'CSS Animations'],
     color: '#B5838D',
-    year: '2024',
+    year: '2025',
     role: 'Designer & Développeur',
     context: 'Projet freelance',
+    url: 'https://wanda-com.com/',
     highlights: [
       'Design élégant maison et sur-mesure',
       'Palette marron / vert pastel / rose pastel',
@@ -226,7 +287,62 @@ export const projectsData: ProjectData[] = [
       'Un site qui lui a permis d\'obtenir ses premiers clients freelance. Le design a été remarqué et cité comme référence par plusieurs personnes de son réseau.',
   },
   {
-    id: 8,
+    id: 11,
+    slug: 'wanen',
+    title: 'Wanen',
+    description:
+      'Application de gestion des cours sur-mesure pour une étudiante ISCOM. Prise de notes style Notion avec commandes slash, todo list, gestion de projets avec échéances, notifications WhatsApp et Google Calendar.',
+    longDescription:
+      'Wanen est une application web conçue entièrement à la demande d\'une étudiante de l\'ISCOM, pour l\'aider à gérer ses cours, projets et tâches au quotidien.\n\nJ\'ai développé un système de prise de notes inspiré de Notion, avec des commandes slash : /titre, /citation, /liste, etc. Chaque bloc est inséré et mis en forme instantanément.\n\nL\'application inclut également une todo list avec rappels, et une gestion de projets avec des échéances. Pour ne rien oublier, j\'ai connecté l\'API WhatsApp pour envoyer automatiquement une notification chaque matin avec les tâches du jour. Les échéances des projets sont aussi synchronisées avec Google Calendar via OAuth.\n\nL\'ensemble du site est responsive et disponible en PWA, installable directement sur mobile comme une application native.',
+    image: '/projet/wanen.png',
+    tags: ['PHP', 'JavaScript', 'WhatsApp API', 'Google Calendar API', 'PWA'],
+    color: '#7B8FA1',
+    year: '2026',
+    role: 'Développeur Fullstack & Designer',
+    context: 'Projet freelance',
+    highlights: [
+      'Prise de notes style Notion avec commandes slash (/titre, /citation…)',
+      'Todo list avec rappels quotidiens automatiques',
+      'Gestion de projets avec échéances',
+      'Notifications WhatsApp automatiques chaque matin',
+      'Synchronisation Google Calendar via OAuth',
+      'PWA installable + design 100% responsive',
+    ],
+    challenge:
+      'Créer une application aussi complète que Notion mais pensée pour un seul usage et une seule personne, avec des intégrations concrètes (WhatsApp, Google Calendar) qui rendent l\'outil vraiment utile au quotidien.',
+    result:
+      'Une application utilisée chaque jour par l\'étudiante pour organiser sa scolarité. Les notifications WhatsApp ont particulièrement changé son rapport aux deadlines.',
+    url: 'https://wanen-projects.vercel.app/',
+  },
+  {
+    id: 12,
+    slug: 'flow',
+    title: 'Flow',
+    description:
+      'Jeu de puzzle basé sur le Hamiltonian Path : relier tous les nœuds en couvrant chaque case de la grille. Mode histoire et multijoueur en ligne.',
+    longDescription:
+      'Flow est un jeu de puzzle que j\'ai conçu et développé en seulement 2 après-midis, basé sur le concept mathématique du Hamiltonian Path.\n\nLe principe : sur une grille, relier tous les nœuds colorés en traçant un chemin qui passe par chaque case exactement une fois. Simple à comprendre, difficile à maîtriser.\n\nJ\'ai développé un mode histoire avec des niveaux progressifs, et un mode multijoueur en ligne permettant à deux joueurs de s\'affronter en temps réel.',
+    image: '/projet/flow.png',
+    tags: ['JavaScript', 'WebSocket', 'Game Design'],
+    color: '#4ECDC4',
+    year: '2026',
+    role: 'Développeur & Game Designer',
+    context: 'Projet personnel',
+    url: 'https://flow-chi-beryl.vercel.app/',
+    highlights: [
+      'Basé sur le Hamiltonian Path (mathématiques combinatoires)',
+      'Mode histoire avec niveaux progressifs',
+      'Multijoueur en ligne en temps réel',
+      'Développé en 2 après-midis',
+      'Génération de grilles algorithmique',
+    ],
+    challenge:
+      'Implémenter la logique du Hamiltonian Path de façon fluide et intuitive, et faire tourner le multijoueur en temps réel sans latence perceptible, le tout en un temps record.',
+    result:
+      'Un jeu complet et jouable en deux après-midis de développement. La contrainte de temps a forcé des choix d\'architecture simples mais efficaces.',
+  },
+  {
+    id: 13,
     slug: 'spill',
     title: 'Spill',
     description:
@@ -236,7 +352,7 @@ export const projectsData: ProjectData[] = [
     image: '/projet/spill.jpeg',
     tags: ['Next.js', 'Supabase', 'Mistral API', 'Make', 'Vercel'],
     color: '#E56B6F',
-    year: '2024',
+    year: '2025',
     role: 'Développeur & Designer',
     context: 'Projet personnel',
     highlights: [
@@ -252,7 +368,7 @@ export const projectsData: ProjectData[] = [
       'Un jeu utilisé en soirée par des groupes d\'amis. La génération IA a permis d\'avoir des centaines de questions uniques sans travail éditorial manuel.',
   },
   {
-    id: 9,
+    id: 14,
     slug: 'make-auto',
     title: 'Make Auto',
     description:
@@ -262,7 +378,7 @@ export const projectsData: ProjectData[] = [
     image: '/projet/make.png',
     tags: ['Make.com', 'Gmail', 'Google Sheets', 'Google Docs', 'Mistral AI'],
     color: '#FFB5A7',
-    year: '2024',
+    year: '2025 - 2026',
     role: 'Automatisation & IA',
     context: 'Projet personnel',
     highlights: [
@@ -278,7 +394,7 @@ export const projectsData: ProjectData[] = [
       'Un système qui m\'a permis d\'envoyer des dizaines de candidatures personnalisées en quelques heures. Taux de réponse significativement supérieur aux envois manuels.',
   },
   {
-    id: 10,
+    id: 15,
     slug: 'n8n-flows',
     title: 'n8n Flows',
     description:
@@ -288,7 +404,7 @@ export const projectsData: ProjectData[] = [
     image: '/projet/n8n.jpg',
     tags: ['n8n', 'Claude API', 'PDF.co', 'MySQL', 'Firebase'],
     color: '#F4A261',
-    year: '2024',
+    year: '2025 - 2026',
     role: 'Automatisation & Intégrations',
     context: 'Projets clients : Traivis',
     highlights: [

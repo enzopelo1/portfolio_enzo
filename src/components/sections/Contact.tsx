@@ -43,7 +43,7 @@ export const Contact = () => (
           className="mt-8 text-base md:text-lg text-[#4a1c0a]/50 font-mono tracking-wide max-w-md"
           initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.18, ease } }} viewport={{ once: true }}
         >
-          Je suis en recherche d&apos;un CDI/emploi pour 2027.
+          Je suis à la recherche d&apos;une alternance pour Septembre 2026 afin de valider mon Master.
         </motion.p>
       </div>
 
@@ -73,10 +73,10 @@ export const Contact = () => (
             </span>
 
             {/* Label */}
-            <span className="relative font-mono text-[10px] tracking-[0.3em] uppercase text-[#4a1c0a]/30 w-20 shrink-0">{label}</span>
+            <span className="relative font-mono text-[10px] tracking-[0.3em] uppercase text-[#4a1c0a]/30 w-20 shrink-0 hidden sm:block">{label}</span>
 
             {/* Value */}
-            <span className="relative flex-1 text-lg md:text-xl font-semibold text-[#4a1c0a] group-hover:translate-x-1 transition-transform duration-300">
+            <span className="relative flex-1 text-xs sm:text-lg md:text-xl font-semibold text-[#4a1c0a] group-hover:translate-x-1 transition-transform duration-300 break-all sm:break-normal">
               {value}
             </span>
 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ExternalLink } from 'lucide-react';
 import type { ProjectData } from '../../lib/data/projects-data';
 
 interface Props {
@@ -18,7 +18,7 @@ const revealVariants = {
 };
 
 export const ProjectContent = ({ project }: Props) => (
-  <section className="relative px-6 md:px-12 lg:px-16 py-24 md:py-32" style={{ backgroundColor: '#0C0C0C' }}>
+  <section className="relative px-4 md:px-12 lg:px-16 py-16 md:py-32" style={{ backgroundColor: '#0C0C0C' }}>
     {/* Horizontal rule accent */}
     <div className="max-w-6xl mx-auto">
       <div className="w-full h-px mb-20 opacity-10" style={{ backgroundColor: project.color }} />
@@ -35,9 +35,11 @@ export const ProjectContent = ({ project }: Props) => (
             custom={0}
           >
             <Label color={project.color}>Vue d'ensemble</Label>
-            <p className="text-xl md:text-2xl text-white/75 leading-[1.8] mt-6" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, letterSpacing: '-0.01em' }}>
-              {project.longDescription}
-            </p>
+            <p
+              className="text-base md:text-2xl text-white/75 leading-[1.8] mt-6"
+              style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 300, letterSpacing: '-0.01em' }}
+              dangerouslySetInnerHTML={{ __html: project.longDescription.replace(/\n\n/g, '<br><br>') }}
+            />
           </motion.div>
 
           {/* Challenge */}
@@ -120,6 +122,21 @@ export const ProjectContent = ({ project }: Props) => (
             <MetaRow label="Rôle" value={project.role} color={project.color} />
             <div className="h-px bg-white/5" />
             <MetaRow label="Contexte" value={project.context} color={project.color} />
+            {project.url && (
+              <>
+                <div className="h-px bg-white/5" />
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-70"
+                  style={{ color: project.color }}
+                >
+                  <ExternalLink className="w-4 h-4" strokeWidth={1.5} />
+                  Voir le site
+                </a>
+              </>
+            )}
             <div className="h-px bg-white/5" />
             <div>
               <p className="font-mono text-[10px] tracking-widest uppercase text-white/25 mb-3">Stack</p>

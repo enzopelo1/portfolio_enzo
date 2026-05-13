@@ -8,7 +8,7 @@ const stats = [
   { value: '3+', label: 'ans de\ncode perso' },
 ];
 
-const stack = ['Next.js', 'React', 'Node.js', 'Laravel', 'TypeScript', 'n8n', 'Claude API'];
+const stack = ['Next.js', 'React', 'PHP', 'JavaScript', 'TypeScript', 'n8n', 'Claude API'];
 
 const drives = [
   "Automatiser tout ce qui peut l'être",
@@ -21,7 +21,7 @@ export const About = () => (
 
     {/* Watermark géant en fond — cohérent avec le Hero */}
     <motion.div
-      className="absolute -right-12 top-0 select-none pointer-events-none"
+      className="absolute -right-12 top-0 select-none pointer-events-none hidden sm:block"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, transition: { duration: 2 } }}
       viewport={{ once: true }}
@@ -82,7 +82,7 @@ export const About = () => (
         {/* Texte gauche */}
         <div className="lg:col-span-7 lg:pr-20 space-y-8">
           <motion.p
-            className="text-2xl md:text-3xl text-[#4a1c0a] font-medium leading-snug"
+            className="text-xl md:text-3xl text-[#4a1c0a] font-medium leading-snug"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.1, ease } }}
             viewport={{ once: true }}

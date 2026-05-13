@@ -39,6 +39,7 @@ const experiences: Experience[] = [
       'Développement du système Mo&Jo : analyse automatisée des réseaux sociaux avec double passage IA et export PDF.',
       'Développement de MailScan : outil d\'analyse de kits emails par IA pour optimiser la délivrabilité.',
       'Création de workflows d\'automatisation (n8n, Make) pour des clients variés : marketing, e-commerce, RH.',
+      'Développement d\'une suite de 3 agents IA : veille automatique → article de blog SEO, publication LinkedIn condensée avec validation humaine (human-in-the-loop), et chatbot connecté aux données Traivis et à l\'agenda pour la prise de RDV.',
       'Intégration d\'APIs IA (Claude, ChatGPT, Gemini, Mistral) dans des produits clients.',
       'UX/UI design et création de logos pour des projets clients : de la maquette à la livraison.',
       'Création de contenu LinkedIn à ma propre initiative : j\'ai proposé d\'en faire, l\'équipe a dit oui.',
@@ -49,6 +50,7 @@ const experiences: Experience[] = [
       'Autonomie sur des projets de bout en bout',
       'Travailler vite sans sacrifier la qualité',
       'Penser produit, pas juste code',
+      'Concevoir et orchestrer des agents IA autonomes',
       'Maîtriser l\'intégration IA en production',
       'Gérer les deadlines et la pression client',
       'Collaborer en équipe sur des bases de code partagées',
@@ -211,21 +213,22 @@ const ExperienceCard = ({ experience, onClick }: CardProps) => (
         </p>
       </div>
 
-      {/* CTA */}
-      <div className="md:col-span-2 flex md:justify-end items-center gap-2">
+      {/* CTA — visible partout */}
+      <div className="md:col-span-2 flex md:justify-end items-center gap-2 mt-2 md:mt-0">
         <span
-          className="font-mono text-[10px] tracking-[0.25em] uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="font-mono text-[10px] tracking-[0.25em] uppercase md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
           style={{ color: experience.accent }}
         >
           Voir le détail
         </span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          strokeWidth={1.5} stroke={experience.accent}
-          className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 shrink-0"
+        <span
+          className="inline-flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-300 group-hover:scale-110 shrink-0"
+          style={{ borderColor: `${experience.accent}50`, color: experience.accent }}
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-        </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+          </svg>
+        </span>
       </div>
     </div>
   </button>

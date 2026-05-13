@@ -17,9 +17,9 @@ export const Hero = () => {
       ref={heroRef}
       className="relative z-0 min-h-[90vh] flex flex-col items-center justify-center overflow-hidden bg-[#FAF0E6] pt-20"
     >
-      
-      {/* Background Code Snippets (Décoration) */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03] text-sm font-mono overflow-hidden select-none">
+
+      {/* Background Code Snippets (Décoration) — masqués sur mobile pour éviter overflow */}
+      <div className="hidden sm:block absolute inset-0 pointer-events-none opacity-[0.03] text-sm font-mono overflow-hidden select-none">
         <div className="absolute top-20 left-10 transform -rotate-12">
           <pre>{`const portfolio = {\n  owner: 'Enzo',\n  skills: ['React', 'Node']\n};`}</pre>
         </div>
@@ -61,9 +61,9 @@ export const Hero = () => {
 
       {/* Contenu Principal : ENZO (haut) → Photo (centre, chevauche ENZO) → LEPRINCE (bas) */}
       <div className="relative z-10 container mx-auto px-5 md:px-12 lg:px-16 py-12 md:py-16 -mt-4 flex flex-col items-center text-center">
-        
+
         {/* ENZO : très grand en haut */}
-        <h1 className="font-['Modak'] -mt-16 md:-mt-24 lg:-mt-32 text-[18vw] sm:text-[16vw] md:text-[14rem] lg:text-[18rem] xl:text-[22rem] leading-[0.85] text-[#4a1c0a] tracking-tight">
+        <h1 className="font-['Modak'] -mt-8 sm:-mt-16 md:-mt-24 lg:-mt-32 text-[28vw] sm:text-[16vw] md:text-[14rem] lg:text-[18rem] xl:text-[22rem] leading-[0.85] text-[#4a1c0a] tracking-tight">
           <motion.span
             className="block"
             initial={skipAnim ? false : { y: 100, opacity: 0, skewY: 5 }}
@@ -74,9 +74,9 @@ export const Hero = () => {
           </motion.span>
         </h1>
 
-        {/* Photo au centre : sans contour, chevauche le prénom (z-10 sous LEPRINCE) */}
+        {/* Photo au centre */}
         <motion.div
-          className="relative z-10 -mt-[14vw] sm:-mt-[12vw] md:-mt-36 lg:-mt-44 xl:-mt-52 w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] xl:w-[38rem] xl:h-[38rem] overflow-hidden"
+          className="relative z-10 -mt-[14vw] sm:-mt-[12vw] md:-mt-36 lg:-mt-44 xl:-mt-52 w-[60vw] h-[60vw] sm:w-72 sm:h-72 md:w-[28rem] md:h-[28rem] lg:w-[32rem] lg:h-[32rem] xl:w-[38rem] xl:h-[38rem] overflow-hidden"
           initial={skipAnim ? false : { scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -89,16 +89,16 @@ export const Hero = () => {
         </motion.div>
 
         {/* LEPRINCE : en bas, au-dessus de l'image (z-20) + Développeur Fullstack */}
-        <div className="relative z-20 -mt-14 md:-mt-24 lg:-mt-32 xl:-mt-40">
+        <div className="relative z-20 -mt-[10vw] sm:-mt-14 md:-mt-24 lg:-mt-32 xl:-mt-40">
           <motion.h2
-            className="absolute bottom-full right-0 mb-1 text-base sm:text-lg md:text-xl font-medium text-[#4a1c0a]/90"
+            className="absolute bottom-full right-0 mb-1 text-sm sm:text-base md:text-xl font-medium text-[#4a1c0a]/90"
             initial={skipAnim ? false : { y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
             Développeur Fullstack
           </motion.h2>
-          <h1 className="font-['Modak'] text-[14vw] sm:text-[12vw] md:text-[10rem] lg:text-[14rem] xl:text-[16rem] leading-[0.9] text-[#4a1c0a] tracking-tight">
+          <h1 className="font-['Modak'] text-[21vw] sm:text-[12vw] md:text-[10rem] lg:text-[14rem] xl:text-[16rem] leading-[0.9] text-[#4a1c0a] tracking-tight">
             <motion.span
               className="block"
               initial={skipAnim ? false : { y: 100, opacity: 0, skewY: 5 }}
@@ -108,7 +108,7 @@ export const Hero = () => {
               LEPRINCE
             </motion.span>
           </h1>
-        </div>        
+        </div>
       </div>
     </section>
   );

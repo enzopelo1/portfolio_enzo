@@ -45,7 +45,7 @@ export const ProjectHero = ({ project, onBack }: Props) => (
     </div>
 
     {/* Header bar */}
-    <div className="relative z-20 flex items-center justify-between px-6 md:px-12 pt-8">
+    <div className="relative z-20 flex items-center justify-between px-4 md:px-12 pt-6 md:pt-8">
       <motion.button
         onClick={onBack}
         className="flex items-center gap-2 text-white/50 hover:text-white transition-colors duration-300 group"
@@ -57,26 +57,26 @@ export const ProjectHero = ({ project, onBack }: Props) => (
       </motion.button>
 
       <motion.div
-        className="flex items-center gap-3"
+        className="flex items-center gap-2 md:gap-3"
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.3, ease } }}
       >
-        <span className="font-mono text-xs tracking-widest uppercase text-white/30">{project.year}</span>
-        <span className="w-1 h-1 rounded-full bg-white/20" />
-        <span className="font-mono text-xs tracking-widest uppercase text-white/30">{project.context}</span>
+        <span className="font-mono text-[10px] md:text-xs tracking-widest uppercase text-white/30">{project.year}</span>
+        <span className="w-1 h-1 rounded-full bg-white/20 hidden sm:block" />
+        <span className="font-mono text-[10px] md:text-xs tracking-widest uppercase text-white/30 hidden sm:block">{project.context}</span>
       </motion.div>
     </div>
 
     {/* Main hero content */}
-    <div className="relative z-20 flex-1 flex flex-col justify-end px-6 md:px-12 lg:px-16 pb-16 md:pb-24">
+    <div className="relative z-20 flex-1 flex flex-col justify-end px-4 md:px-12 lg:px-16 pb-12 md:pb-24">
       {/* Giant number */}
       <motion.div
-        className="absolute right-4 md:right-8 bottom-8 select-none pointer-events-none"
+        className="absolute right-2 md:right-8 bottom-8 select-none pointer-events-none"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1, delay: 0.5 } }}
       >
         <span
-          className="text-[20vw] font-black leading-none"
+          className="text-[25vw] md:text-[20vw] font-black leading-none"
           style={{
             color: 'transparent',
             WebkitTextStroke: `1px ${project.color}30`,
@@ -100,7 +100,7 @@ export const ProjectHero = ({ project, onBack }: Props) => (
         </motion.div>
 
         <motion.h1
-          className="text-[12vw] md:text-[9vw] lg:text-[7vw] text-white leading-[0.9] tracking-tight mb-8"
+          className="text-[14vw] sm:text-[12vw] md:text-[9vw] lg:text-[7vw] text-white leading-[0.9] tracking-tight mb-6 md:mb-8"
           style={{ fontFamily: "'Modak', cursive" }}
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 0.9, delay: 0.2, ease } }}
@@ -109,7 +109,7 @@ export const ProjectHero = ({ project, onBack }: Props) => (
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-white/55 leading-relaxed max-w-2xl"
+          className="text-sm md:text-xl text-white/55 leading-relaxed max-w-2xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 0.7, delay: 0.5, ease } }}
         >

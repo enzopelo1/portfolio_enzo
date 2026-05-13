@@ -26,7 +26,7 @@ const categories = [
   {
     title: 'DevOps & Outils',
     num: '05',
-    skills: ['GitHub', 'Docker', 'VPS', 'VSCode', 'Cursor'],
+    skills: ['GitHub', 'Docker', 'VPS', 'VSCode', 'Cursor', 'Claude Code'],
   },
 ];
 

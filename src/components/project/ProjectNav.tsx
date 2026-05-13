@@ -54,7 +54,7 @@ const NavCard = ({ project, direction, onNavigate }: NavCardProps) => {
   return (
     <motion.button
       onClick={() => onNavigate(project.slug)}
-      className={`group relative overflow-hidden p-8 md:p-12 lg:p-16 flex flex-col ${isPrev ? 'items-start' : 'items-end'} text-left`}
+      className={`group relative overflow-hidden p-5 md:p-12 lg:p-16 flex flex-col ${isPrev ? 'items-start' : 'items-end'} text-left`}
       whileHover="hovered"
       initial="idle"
     >
@@ -104,7 +104,7 @@ const NavCard = ({ project, direction, onNavigate }: NavCardProps) => {
         </div>
 
         <motion.h3
-          className="text-3xl md:text-4xl lg:text-5xl font-black text-white/70 leading-tight"
+          className="text-xl md:text-4xl lg:text-5xl font-black text-white/70 leading-tight"
           style={{ fontFamily: "'Modak', cursive" }}
           variants={{
             idle: { color: 'rgba(255,255,255,0.55)' },
