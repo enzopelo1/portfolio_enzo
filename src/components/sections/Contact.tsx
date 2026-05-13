@@ -55,7 +55,7 @@ export const Contact = () => (
             href={href}
             target={href.startsWith('http') ? '_blank' : undefined}
             rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-            className="group relative flex items-center gap-6 border-b border-[#4a1c0a]/10 py-7 md:py-9 overflow-hidden"
+            className="group relative flex items-center gap-6 border-b border-[#4a1c0a]/10 py-7 md:py-9"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.55, delay: i * 0.07, ease } }}
             viewport={{ once: true }}

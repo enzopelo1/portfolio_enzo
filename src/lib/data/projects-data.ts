@@ -107,7 +107,7 @@ export const projectsData: ProjectData[] = [
     longDescription:
       'J\'ai pris en charge la refonte totale de traivis.io, de A à Z. Côté design, tout a été repensé pour refléter l\'identité de l\'agence et mieux convaincre les visiteurs. Côté contenu, j\'ai restructuré l\'ensemble des textes pour clarifier la proposition de valeur de Traivis et l\'optimiser pour le référencement naturel.\n\nJ\'ai également développé et intégré un chatbot IA directement sur le site : il connaît les informations de l\'entreprise, peut répondre aux questions des visiteurs et se connecte à l\'agenda pour proposer et réserver des rendez-vous en temps réel.\n\nEnfin, j\'ai créé une interface admin complète permettant à l\'équipe de gérer les articles du blog et de suivre les coûts en tokens des agents IA déployés.',
     image: '/projet/traivis.png',
-    tags: ['React', 'TypeScript', 'Claude API', 'SEO', 'Chatbot IA', 'Admin', 'Blog'],
+    tags: ['PHP', 'JavaScript', 'Claude API', 'SEO', 'Chatbot IA', 'Admin', 'Blog'],
     color: '#3D6B8A',
     year: '2026',
     role: 'Développeur Fullstack & Designer',
@@ -324,7 +324,7 @@ export const projectsData: ProjectData[] = [
       'Flow est un jeu de puzzle que j\'ai conçu et développé en seulement 2 après-midis, basé sur le concept mathématique du Hamiltonian Path.\n\nLe principe : sur une grille, relier tous les nœuds colorés en traçant un chemin qui passe par chaque case exactement une fois. Simple à comprendre, difficile à maîtriser.\n\nJ\'ai développé un mode histoire avec des niveaux progressifs, et un mode multijoueur en ligne permettant à deux joueurs de s\'affronter en temps réel.',
     image: '/projet/flow.png',
     tags: ['JavaScript', 'WebSocket', 'Game Design'],
-    color: '#4ECDC4',
+    color: '#1A7A74',
     year: '2026',
     role: 'Développeur & Game Designer',
     context: 'Projet personnel',

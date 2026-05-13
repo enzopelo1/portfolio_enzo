@@ -163,37 +163,70 @@ interface CardProps {
 }
 
 const ExperienceCard = ({ experience, onClick }: CardProps) => (
-  <button
+  <motion.button
     onClick={onClick}
-    className="group w-full text-left border-b border-[#4a1c0a]/10 py-10 md:py-12 relative overflow-hidden"
+    className="group w-full text-left border-b border-[#4a1c0a]/10 py-10 md:py-12 relative overflow-hidden cursor-pointer"
     aria-label={`Voir les détails de ${experience.company}`}
+    whileHover="hovered"
+    initial="idle"
   >
-    {/* Hover background line */}
+    {/* Fond coloré à gauche au hover */}
     <motion.div
       className="absolute inset-0 pointer-events-none"
-      initial={{ opacity: 0 }}
-      whileHover={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
-      style={{ background: `linear-gradient(to right, ${experience.accent}08, transparent 60%)` }}
+      variants={{
+        idle: { opacity: 0 },
+        hovered: { opacity: 1, transition: { duration: 0.3 } },
+      }}
+      style={{ background: `linear-gradient(to right, ${experience.accent}18, ${experience.accent}06 60%, transparent)` }}
+    />
+
+    {/* Fond coloré sur le quart droit */}
+    <motion.div
+      className="absolute top-0 bottom-0 right-0 w-[16%] pointer-events-none"
+      variants={{
+        idle: { opacity: 0, scaleX: 0.8, originX: 1 },
+        hovered: { opacity: 1, scaleX: 1, originX: 1, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } },
+      }}
+      style={{ backgroundColor: `${experience.accent}22` }}
+    />
+
+    {/* Barre colorée à gauche */}
+    <motion.div
+      className="absolute left-0 top-0 bottom-0 w-1 rounded-r-full z-0"
+      style={{ backgroundColor: experience.accent }}
+      variants={{
+        idle: { scaleY: 0, originY: 0.5 },
+        hovered: { scaleY: 1, originY: 0.5, transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] } },
+      }}
     />
 
     <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-0 items-center">
 
       {/* Numéro */}
-      <div className="md:col-span-1">
-        <span className="font-['Modak'] text-[#4a1c0a]/12 group-hover:text-[#4a1c0a]/25 transition-colors duration-300"
-          style={{ fontSize: 'clamp(2rem, 3vw, 3rem)' }}>
+      <div className="md:col-span-1 pl-4">
+        <motion.span
+          className="font-['Modak'] block transition-colors duration-300"
+          style={{ fontSize: 'clamp(2rem, 3vw, 3rem)', color: experience.accent }}
+          variants={{
+            idle: { opacity: 0.12 },
+            hovered: { opacity: 0.5, transition: { duration: 0.3 } },
+          }}
+        >
           {String(experience.id).padStart(2, '0')}
-        </span>
+        </motion.span>
       </div>
 
       {/* Entreprise + rôle */}
       <div className="md:col-span-5 md:pl-8">
-        <h3
-          className="text-2xl md:text-3xl font-semibold text-[#4a1c0a] leading-tight mb-2 group-hover:translate-x-1 transition-transform duration-300"
+        <motion.h3
+          className="text-2xl md:text-3xl font-semibold text-[#4a1c0a] leading-tight mb-2"
+          variants={{
+            idle: { x: 0 },
+            hovered: { x: 6, transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] } },
+          }}
         >
           {experience.company}
-        </h3>
+        </motion.h3>
         <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#4a1c0a]/40">
           {experience.role}
         </p>
@@ -213,23 +246,33 @@ const ExperienceCard = ({ experience, onClick }: CardProps) => (
         </p>
       </div>
 
-      {/* CTA — visible partout */}
-      <div className="md:col-span-2 flex md:justify-end items-center gap-2 mt-2 md:mt-0">
-        <span
-          className="font-mono text-[10px] tracking-[0.25em] uppercase md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
-          style={{ color: experience.accent }}
-        >
-          Voir le détail
-        </span>
-        <span
-          className="inline-flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-300 group-hover:scale-110 shrink-0"
-          style={{ borderColor: `${experience.accent}50`, color: experience.accent }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-          </svg>
-        </span>
+      {/* CTA */}
+      <div className="md:col-span-2 flex md:justify-end items-center gap-3 mt-2 md:mt-0 overflow-hidden">
+        <div className="flex items-center gap-3 relative">
+          <motion.span
+            className="font-mono text-[10px] tracking-[0.25em] uppercase whitespace-nowrap"
+            style={{ color: experience.accent }}
+            variants={{
+              idle: { opacity: 0, x: 40 },
+              hovered: { opacity: 1, x: 0, transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] } },
+            }}
+          >
+            Voir le détail
+          </motion.span>
+          <motion.span
+            className="inline-flex items-center justify-center w-9 h-9 rounded-full shrink-0"
+            style={{ backgroundColor: `${experience.accent}18`, color: experience.accent }}
+            variants={{
+              idle: { scale: 1, x: 40, backgroundColor: `${experience.accent}18` },
+              hovered: { scale: 1.15, x: 0, backgroundColor: `${experience.accent}30`, transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] } },
+            }}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
+          </motion.span>
+        </div>
       </div>
     </div>
-  </button>
+  </motion.button>
 );

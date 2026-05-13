@@ -36,7 +36,7 @@ const projects = [
     description:
       'Refonte complète du site traivis.io : design, SEO, restructuration des textes. Chatbot IA intégré connecté aux infos entreprise et à l\'agenda pour prendre des RDV. Interface admin pour gérer les articles de blog et les coûts en tokens des agents IA.',
     image: '/projet/traivis.png',
-    tags: ['React', 'TypeScript', 'Claude API', 'SEO', 'Chatbot IA', 'Admin', 'Blog'],
+    tags: ['PHP', 'JavaScript', 'Claude API', 'SEO', 'Chatbot IA', 'Admin', 'Blog'],
     color: '#3D6B8A',
   },
   {
@@ -109,7 +109,7 @@ const projects = [
       'Jeu de puzzle basé sur le Hamiltonian Path : relier tous les nœuds en couvrant chaque case de la grille. Mode histoire et multijoueur en ligne. Développé en 2 après-midis.',
     image: '/projet/flow.png',
     tags: ['JavaScript', 'WebSocket', 'Game Design'],
-    color: '#4ECDC4',
+    color: '#1A7A74',
   },
   {
     id: 13,
