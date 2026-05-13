@@ -6,7 +6,7 @@ import {
 } from '../../animations/framer/variants';
 import { useState, forwardRef } from 'react';
 
-const navItems = ['Projets', 'À propos', 'Compétences', 'Contact'];
+const navItems = ['Projets', 'À propos', 'Compétences', 'Témoignages', 'Contact'];
 
 export const Navigation = forwardRef<HTMLElement>((_props, ref) => {
   return (

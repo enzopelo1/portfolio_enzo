@@ -9,7 +9,7 @@ interface MobileMenuProps {
   onClose: () => void;
 }
 
-const navItems = ['Projets', 'À propos', 'Compétences', 'Contact'];
+const navItems = ['Projets', 'À propos', 'Compétences', 'Témoignages', 'Contact'];
 
 export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   return (

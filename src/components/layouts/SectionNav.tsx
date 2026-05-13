@@ -4,7 +4,7 @@ import { ChevronUp, ChevronDown } from 'lucide-react';
 import { ScrollTrigger } from '../../animations/gsap/config';
 
 // 'hero' = top de la page (scroll à 0), pas d'id
-const SECTIONS = ['hero', 'projets', 'à-propos', 'expériences', 'compétences', 'contact'];
+const SECTIONS = ['hero', 'projets', 'à-propos', 'expériences', 'compétences', 'témoignages', 'contact'];
 
 const getTop = (id: string): number => {
   if (id === 'hero') return 0;

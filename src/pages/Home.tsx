@@ -9,6 +9,7 @@ import { About } from '../components/sections/About';
 import { Experience } from '../components/sections/Experience';
 import { Skills } from '../components/sections/Skills';
 import { Contact } from '../components/sections/Contact';
+import { Testimonials } from '../components/sections/Testimonials';
 import { useSmoothScroll } from '../lib/hooks/use-smooth-scroll';
 import { SectionNav } from '../components/layouts/SectionNav';
 
@@ -48,6 +49,7 @@ export const Home = () => {
         <About />
         <Experience />
         <Skills />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />
