@@ -7,7 +7,7 @@ const links = [
   { icon: Mail,     label: 'Email',    value: 'hanzoleprince62@gmail.com',          href: 'mailto:hanzoleprince62@gmail.com' },
   { icon: Linkedin, label: 'LinkedIn', value: 'Enzo Leprince',                       href: 'https://www.linkedin.com/in/enzo-leprince-6a1721253/' },
   { icon: Github,   label: 'GitHub',   value: '@enzopelo1',                          href: 'https://github.com/enzopelo1' },
-  { icon: FileText, label: 'CV',       value: 'Télécharger mon CV',                  href: '/cv.pdf' },
+  { icon: FileText, label: 'CV',       value: 'Télécharger mon CV',                  href: '/projet/CV-Enzo-Leprince-Alternance.pdf' },
 ];
 
 export const Contact = () => (
