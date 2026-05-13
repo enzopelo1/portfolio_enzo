@@ -27,7 +27,7 @@ const socialLinks = [
   {
     icon: Mail,
     label: 'Email',
-    href: 'mailto:hanzoleprince62@gmail.com',
+    href: 'mailto:enzoleprince5@gmail.com',
   },
   {
     icon: Linkedin,
